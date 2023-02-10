@@ -35,6 +35,6 @@ sgMail
   });
 })
 
-app.listen(4000,()=>{
+app.listen(process.env.PORT||4000,()=>{
     console.log(`The server is running at port:${process.env.PORT}`)
 })
