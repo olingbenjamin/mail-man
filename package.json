@@ -1,0 +1,17 @@
+{
+  "name": "mailman",
+  "version": "1.0.0",
+  "description": "Mail manager",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "oling emmanuel benjamin",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "expres": "^0.0.5"
+  }
+}
