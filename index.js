@@ -3,10 +3,11 @@ const express= require("express")
 const app= express();
 const sgMail= require('@sendgrid/mail');
 const cors= require('cors');
+const helmet= require('helmet')
 sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
 
 app.use(express.json());
-
+app.use(helmet())
 app.use(cors());
 
 app.get('/',(req,res)=>{
@@ -35,6 +36,8 @@ sgMail
   });
 })
 
-app.listen(process.env.PORT||4000,()=>{
-    console.log(`The server is running at port:${process.env.PORT}`)
+const port= process.env.PORT||4000
+
+app.listen(port,()=>{
+    console.log(`The server is running at port:${port}`)
 })
