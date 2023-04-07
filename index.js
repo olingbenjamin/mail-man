@@ -11,7 +11,7 @@ app.use(helmet())
 app.use(cors());
 
 app.get('/',(req,res)=>{
-    res.send("Welcome")
+    res.send('WELCOME')
 })
 
 app.post('/',(req,res)=>{
